@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import birds from "./birds.json";
 
-export default function Form() {
+export default function Form(props) {
   const [name, setName] = useState("");
   const [genus, setGenus] = useState("");
   const [image, setImage] = useState("");
@@ -19,9 +19,7 @@ export default function Form() {
       conservationStatus: conservationStatus,
     };
 
-    birds.post = [];
-    console.log(birds.post);
-    birds.post.push(fields);
+    props.onSubmit(fields);
 
     setName("");
     setGenus("");

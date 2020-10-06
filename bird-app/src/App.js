@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Route, Link } from "react-router-dom";
 import Bird from "./Bird";
 import Form from "./Form";
@@ -7,12 +7,23 @@ import Home from "./Home";
 import "./App.css";
 
 function App() {
+  const [birdJson, setBirdJson] = useState(birds);
+
+  const addBird = (bird) => {
+    setBirdJson((oldArray) => [...oldArray, bird]);
+  };
+
   return (
     <div className="App">
-      <Home />
+      <div className="header-container">
+        <Link className="link" to="/">
+          <h1>Audubon Society</h1>
+        </Link>
+      </div>
       <Route exact path="/">
+        <Home />
         <div className="bird-container">
-          {birds.map((bird) => (
+          {birdJson.map((bird) => (
             <Link to={`/birds/${bird.name}`}>
               <img className="indiv-bird" src={bird.image} alt={bird.name} />
             </Link>
@@ -20,10 +31,10 @@ function App() {
         </div>
       </Route>
       <Route path="/new">
-        <Form />
+        <Form onSubmit={addBird} />
       </Route>
       <Route path="/birds/:name">
-        <Bird birds={birds} />
+        <Bird birds={birdJson} />
       </Route>
     </div>
   );
