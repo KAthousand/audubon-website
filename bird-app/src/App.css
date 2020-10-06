@@ -1,0 +1,139 @@
+.App {
+  margin: 0;
+}
+
+.header-container {
+  border: 2px solid rgb(70, 70, 70);
+  background-color: rgb(70, 70, 70);
+  color: white;
+}
+
+.header-container h1 {
+  margin: 30px 120px;
+  color: white;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 50px 120px;
+  color: rgb(70, 70, 70);
+}
+
+.nav-container h2,
+.nav-container p {
+  margin: 20px 0;
+}
+
+.link {
+  text-decoration: none;
+  color: rgb(70, 70, 70);
+}
+
+.add {
+  font-style: italic;
+}
+
+.bird-container {
+  margin: 10px 120px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.indiv-bird {
+  background-position: center;
+  object-fit: contain;
+  height: 200px;
+  width: 200px;
+}
+
+.add-bird-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.add-bird-form {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  text-align: left;
+  width: 300px;
+  color: rgb(70, 70, 70);
+}
+
+.add-bird-form input {
+  border: 2px solid rgb(70, 70, 70);
+  border-radius: 3px;
+  margin-bottom: 20px;
+  height: 25px;
+}
+
+.add-bird-form label {
+  letter-spacing: 1px;
+  font-size: 0.8em;
+  font-weight: bold;
+  margin: 0px 0px 5px 2px;
+}
+
+.add-bird-form textarea {
+  border: 2px solid rgb(70, 70, 70);
+  height: 75px;
+  border-radius: 3px;
+  margin-bottom: 20px;
+}
+
+.submit-container {
+  background-color: rgb(70, 70, 70);
+  color: white;
+  border: none;
+  border-radius: 2px;
+  width: 70px;
+  padding: 6px 3px;
+  font-size: 0.75em;
+  font-weight: bold;
+  letter-spacing: 0.75px;
+}
+
+.indiv-bird-cont {
+  margin: 0px 150px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bird-info-container {
+  color: rgb(70, 70, 70);
+  width: 350px;
+}
+
+.bird-info-container h1,
+h4 {
+  line-height: 0.75em;
+}
+
+.bird-info-container h4 {
+  font-weight: 400;
+  font-style: italic;
+}
+
+.bird-info-container h5 {
+  letter-spacing: 1px;
+  margin: 60px 0 -5px 0;
+}
+
+.bird-info-container p {
+  font-size: 0.9em;
+  line-height: 1.5em;
+  letter-spacing: 1px;
+}
+
+.bird-img-container img {
+  height: 250px;
+  width: 200px;
+  background-position: center;
+  object-fit: contain;
+  margin-right: 20px;
+}
